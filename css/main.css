@@ -1,0 +1,728 @@
+
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2.5rem;
+}
+
+/*Header*/
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f50000;
+    width: 100%;
+    height: 3rem;
+    box-shadow: 0 2px 2px rgba(57, 63, 72, 0.3);
+    -webkit-box-shadow: 0 2px 2px rgba(57, 63, 72, 0.3);
+    transition: all 0.5s ease-in-out;
+    z-index: 100;
+}
+
+.header.hide {
+    transform: translateY(-48px);
+    transition: all 0.5s ease-in-out;
+}
+
+/*Fim Header*/
+.header .logo {
+    margin-left: 1rem;
+}
+
+.header .logo #linkLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .logo #linkLogo #logoNome{
+    width: 150px;
+}
+
+.header .logo #linkLogo #logoImagem{
+    width: 30px;
+    margin-right: 0.5rem;
+}
+
+/*Menu*/
+.menu {
+    display: none;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.menu ul li {
+    margin: 1rem;
+}
+
+.menu ul li a{
+    color: #fff;
+}
+/*Fim Menu*/
+
+/*Menu Mobile*/
+.menuMobile {
+    position: absolute;
+    top: 3rem;
+    right: -700px;
+    width: 80%;
+    height: 100vh;
+    background: #f50000;
+    padding: 2rem;
+    transition: all 0.5s linear;
+}
+
+.menuMobile ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.menuMobile ul li {
+    margin: 2rem;
+}
+
+.menuMobile ul li a {
+    color: #ffffff;
+    font-size: 5vw;
+}
+
+.menuMobile.is-open {
+    right: 0;
+}
+
+/*Fim Menu Mobile*/
+body {
+    background: #f50000;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.titulo .fa-headset {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: #404040;
+    margin-right: 4px;
+    margin-bottom: 2px;
+}
+
+h2 {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    color: #f50000;
+}
+
+/*Section Inicio Inicio*/
+#inicio {
+    
+    width: 100vw;
+    height: auto;
+    padding-top: 3rem;
+}
+
+#inicio .containerInicio{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudoInicio1{
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.titulo1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo1 h1{
+    font-size: clamp(3rem, 10vw, 7vw);
+    font-family: 'Poppins', sans-serif;
+    margin-right: 1rem;
+    color: #404040;
+}
+
+.titulo1 #titulo1Imagem{
+    width: 14%;
+    margin-top: 0.5rem;
+}
+
+.conteudoInicio1 .github{
+    margin-right: 20%; 
+    position: relative;
+}
+
+.conteudoInicio1 .github #githubImagem{
+    width: 5vw;
+    min-width: 40px;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pulsar ::after, 
+.pulsar ::before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: -30px;
+    right: -30px;
+    top: -30px;
+    bottom: -25px;
+    animation: ring 1.5s linear infinite;
+    opacity: 0;
+}
+
+.pulsar ::after{
+    animation-delay: .6s;
+}
+
+.conteudoInicio1 .pulsar ::before,
+.conteudoInicio1 .pulsar ::after{
+    border: 1px solid #404040;
+    bottom: -30px;
+}
+
+.conteudoInicio2 .pulsar ::before,
+.conteudoInicio2 .pulsar ::after{
+    border: 1px solid #ffffff;
+}
+
+.containerSobreMim .curriculo.pulsar ::before,
+.containerSobreMim .curriculo.pulsar ::after{
+    border: 1px solid #404040;
+}
+
+.containerSobreMim .linkedin.pulsar ::before,
+.containerSobreMim .linkedin.pulsar ::after{
+    border: 1px solid #2e6ece;
+}
+
+
+
+@keyframes ring {
+    0%{
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.conteudoInicio1 .astronalta1{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0 3rem 0;
+}
+
+.conteudoInicio1 .astronalta1 #astroimg1{
+    width: 50%;
+    height: auto;
+}
+
+.conteudoInicio2{
+    background: #404040;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+}
+
+.titulo2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo2 h1{
+    font-size: clamp(3rem, 10vw, 7vw);
+    font-family: 'font brush', sans-serif;
+    font-weight: lighter;
+    
+    color: #ffffff;
+}
+
+.titulo2 #titulo2Imagem {
+    width: 14%;
+    margin-top: 0.5rem;
+}
+
+.conteudoInicio2flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudoInicio2 .behance{
+    margin-left: 20%;
+    position: relative;
+}
+
+.conteudoInicio2 .behance #behanceImagem{
+    width: 5vw;
+    min-width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+.conteudoInicio2 .astronalta2{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudoInicio2 .astronalta2 #astroimg2{
+    width: 100%;
+    height: auto; 
+}
+
+/*Section Inicio Fim*/
+
+/*Section Sobre Mim Inicio*/
+#sobreMim {
+    background: #ffffff;
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    
+}
+
+.titulo .fa-circle-user {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: #404040;
+    margin-right: 4px;
+    margin-bottom: 2px;
+}
+
+#sobreMim .containerSobreMim{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.flex2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.containerSobreMim .linkedin{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.containerSobreMim .linkedin #linkedinImagem{
+    width: 5vw;
+    min-width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+.containerSobreMim .curriculo{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.containerSobreMim .curriculo #curriculoImagem{
+    width: 5vw;
+    min-width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+.cafe{
+    
+    display: flex;
+    justify-content: center;
+}
+
+.cafe #cafeImagem{
+    width: 7vw;
+    min-width: 70px;
+    height: auto;
+    cursor: pointer;
+}
+
+.conteudoSobreMim1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudoSobreMim1 #conteudoSobreMim1Imagem{
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(60, 66, 119,0.5), -5px 5px 5px rgb(60, 66, 119,0.5);
+    -webkit-box-shadow: 5px 5px 5px rgb(60, 66, 119,0.5), -5px 5px 5px rgb(60, 66, 119,0.5);
+}
+
+.conteudoSobreMim2{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    color: #404040;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+/*Section Sobre Mim Fim*/
+
+/*Section Web Design Inicio*/
+#webDesign {
+    background: #f50000;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+#webDesign h2 {
+    color: #fff;
+}
+
+.titulo .fa-pen-nib {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: #404040;
+    margin-right: 4px;
+    margin-bottom: 2px;
+}
+
+/*Section Web Design Fim*/
+
+/*Section Web Developer Inicio*/
+#webDeveloper {
+    background: #ffffff;
+    width: 100vw;
+    height: 100vh;
+}
+
+.titulo .fa-laptop-code {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: #404040;
+    margin-right: 4px;
+    margin-bottom: 2px;
+}
+
+/*Section Web Developer Fim*/
+
+/*Section Conato inicio*/
+#contato {
+    background: #f50000;
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 15px 0;
+}
+
+#contato h2 {
+    color: #fff;
+}
+
+#contato .containerContato {
+    background: #fff;
+    border-radius: 20px;
+    width: 95%;
+    height: auto;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.conteudoContato1 {
+    width: 100%;
+    height: auto;
+}
+
+.conteudoContato1 #conteudoContato1Imagem{
+    width: 90%;
+}
+
+/*Formulario de conato*/
+.conteudoContato2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    height: 7vh;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: #404040;
+    margin-bottom: 17px;
+}
+
+textarea[type="mesage"] {
+    width: 100%;
+    height: 40vh;
+    padding-top: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: #404040;
+    margin-bottom: 17px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea[type="mesage"]:focus {
+    border-color: #f50000;
+    box-shadow: 0 0 8px 0 #f50000;
+    -webkit-box-shadow: 0 0 8px 0 #f50000;
+    -moz-box-shadow: 0 0 8px 0 #f50000;
+}
+
+.inputWithIcon input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea[type="mesage"] {
+    padding-left: 40px;
+}
+
+.inputWithIcon input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+textarea[type="mesage"]::placeholder {
+    color: #aaa;
+}
+
+.inputWithIcon {
+    position: relative;
+    width: 100%;
+}
+
+.inputWithIcon i {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    padding: 10px 13px;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.inputWithIcon input[type="text"]:focus+i,
+input[type="email"]:focus+i,
+input[type="tel"]:focus+i,
+textarea[type="mesage"]:focus+i {
+    color: #f50000;
+}
+
+.inputWithIcon button[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    background-color: rgb(38, 179, 45);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.inputWithIcon button[type="submit"]:hover {
+    transition: 0.3s;
+    background-color: rgb(0, 255, 34);
+    font-size: 23px;
+}
+
+.inputWithIcon .enviar {
+    left: 55%;
+    transition: 0.3s;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+}
+
+.inputWithIcon button:hover+.enviar {
+    font-size: 23px;
+}
+
+/*Fim formulario de contato*/
+/*Section Conato Fim*/
+
+/*Rodape*/
+footer {
+    background: #ffffff;
+    width: 100vw;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+footer p #rodapeLink{
+    color: #f50000;
+    font-size: clamp(0.1rem, 3vw, 1rem);
+}
+
+/*Fim Rodape*/
+
+@media screen and (min-width:760px) {
+    .menuHamburguer {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menuMobile {
+        display: none;
+    }
+
+    #contato .containerContato {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    
+    #sobreMim .containerSobreMim {
+        flex-direction: column;
+    }
+
+    .flex1{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .conteudoSobreMim1{
+        justify-content: right;
+        padding-right: 5rem;
+        
+    }
+    
+    .conteudoSobreMim1 #conteudoSobreMim1Imagem{
+        width: 60%;
+    }
+
+    .conteudoSobreMim2{
+        padding-right: 4rem;
+    }
+
+    #inicio .containerInicio{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #inicio {
+        width: 100vw;
+        height: 100vh;
+        padding-top: 3rem;
+    }
+
+    .conteudoInicio1 .astronalta1{
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 6.5rem 0 6.5rem 0;
+    }
+
+    .pulsar ::after, 
+    .pulsar ::before{
+        content: '';
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        left: -60px;
+        right: -60px;
+        top: -60px;
+        bottom: -60px;
+        animation: ring 1.5s linear infinite;
+        opacity: 0;
+    }
+
+    .conteudoInicio1 .pulsar ::before,
+    .conteudoInicio1 .pulsar ::after{
+    border: 1px solid #404040;
+    bottom: -60px;
+}
+
+    .pulsar ::after{
+        animation-delay: .6s;
+    }
+
+}

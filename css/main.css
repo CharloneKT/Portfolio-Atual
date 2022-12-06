@@ -719,7 +719,7 @@ footer p #rodapeLink{
     .conteudoInicio1 .pulsar ::after{
     border: 1px solid #404040;
     bottom: -60px;
-}
+    }
 
     .pulsar ::after{
         animation-delay: .6s;

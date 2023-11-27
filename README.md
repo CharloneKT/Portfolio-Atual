@@ -1,2 +1,2 @@
 
-<img src="./img/Portfolio.jpg">
+<img src="./img/Portfolio.jpg" width=50%>

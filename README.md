@@ -1,2 +1,2 @@
 
-<img src="./img/Portfolio.jpg" width=30%>
+<img src="./img/Portfolio.jpg" width=30% align='center'>

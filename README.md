@@ -5,6 +5,6 @@
   
   <a href="https://www.charlone.com.br/">
     <img src="" width=30%>
-  <\a>
+  </a>
     
 </div>

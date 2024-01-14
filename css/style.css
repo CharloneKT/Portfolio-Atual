@@ -46,6 +46,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   position: relative;
   margin: 0;
@@ -62,6 +63,10 @@ body {
   z-index: -1000;
 }
 
+body.sem-scroll{
+  overflow: hidden;
+}
+
 /*Header===============================================================*/
 
 #header {
@@ -72,17 +77,6 @@ body {
   width: 100%;
   grid-area: header;
   
-}
-
-#header #header-background{
-  position: absolute;
-  height: 62px;
-  width: 100%;
-  background: url(../img/Desktop.png) -64px 0px no-repeat;
-  background-size: 56rem;
-  text-indent: -9999px;
-  float: center;
-  z-index: -1;
 }
 
 #header #logo {
@@ -105,13 +99,16 @@ body {
 #header nav {
   background: #222222;
   position: absolute;
-  top: 62px;
+  
   right: 0px;
   width: 100%;
+  height: 560px;
   transform: translateY(-500px);
   transition: all 1s ease-in-out;
   font-size: 24px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: -10;
 }
 
@@ -120,13 +117,25 @@ body {
   transition: all 1s ease-in-out;
 }
 
+#header nav #menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+}
+
 #header nav #menu li{
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   border-top: #212121 solid 1px;
   border-bottom: #363636 solid 1px;
+  
 }
 
 #header nav #menu li a {
@@ -164,6 +173,10 @@ body {
 #header.hide {
   transform: translateY(-96px);
   transition: all 0.5s ease-in-out;
+}
+
+#header.semhidemobileopen{
+  transform: translateY(0px);
 }
 
 a:hover,
@@ -239,6 +252,7 @@ a:active{
 
 #section1 .capa{
   height: 70vh;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -683,10 +697,6 @@ textarea[type="message"] {
     padding: 0 10%;
   }
 
-  #header #header-background{
-    display: none;
-  }
-
   #header #logo {
     height: 96px;
     width: 5rem;
@@ -705,11 +715,16 @@ textarea[type="message"] {
     transform: translateY(0px);
     z-index: 1000;
   }
-  
 
+  #header nav #menu{
+    flex-direction: row;
+  }
+  
   #header nav #menu li{
     height: 96px;
     border: 0px;
+    width: auto;
+    background-color: #111;
   }
 
   #header nav #menu li a{
@@ -872,7 +887,6 @@ textarea[type="message"] {
   }
 
   #footer #nav-footer{
-    display: inline-block;
     margin: auto;
     float: right;
   }
